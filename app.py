@@ -1,6 +1,7 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, sessions, session as loging_session
 from databases import add_user_to_database, getallusers
+
 from model import *
 import os
 
@@ -12,10 +13,15 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'giladisking'
 
 # Running the Flask app
-if __name__ == "__main__":
-    app.run(debug=True)
 
-@app.route('/signup', methods=['GET', 'POST'])
+
+
+@app.route('/')
+def home():
+    return render_template("the_website.html")
+
+
+@app.route('/sign_up', methods=['GET', 'POST'])
 def signup():
     if request.method == 'GET':
         return render_template('signup.html')
@@ -41,7 +47,7 @@ def signup():
         return render_template('response.html',
             n=name
             )
-@app.route('/signin' , methods=['GET', 'POST'])
+@app.route('/sign_in' , methods=['GET', 'POST'])
 def signin():
     if request.method == 'GET':
         return render_template('signin.html')
@@ -61,15 +67,5 @@ def signin():
 
 
 
-@app.route('/logout')
-def logout():
-    loging_session.pop('name', None)
-    return redirect(url_for('login'))
-
-
-if 'name' in loging_session:
-
-@app.route('/home')
-def home():
-    name = loging_session['name']
-    return render_template("home.html", name = name)
+if __name__ == "__main__":
+    app.run(debug=True)
