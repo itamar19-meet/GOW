@@ -27,43 +27,27 @@ def signup():
         return render_template('signup.html')
     else:
         name = request.form['name']
-        idnum = request.form['idnum']
         password =request.form['password']
         mail= request.form['mail']
-        users=getallusers()
-        nameflag=False
-        idflag=False
-        mailflag=False
-        for u in users:
-            if u.name==name:
-                return render_template('signup.html', nameflag=nameflag)
-            if u.idnum==idnum:
-                return render_template('signup.html', idflag=idflag)
-            if u.mail==mail:
-                return render_template('signup.html', mailflag=mailflag)
-
-
-        add_user_to_database(name, idnum, password, mail)        
-        return render_template('response.html',
-            n=name
-            )
+        
+        
+        add_user_to_database(name,password, mail)        
+        return render_template('response.html',email = mail)
 @app.route('/sign_in' , methods=['GET', 'POST'])
 def signin():
     if request.method == 'GET':
         return render_template('signin.html')
-    else:
-        idnum = request.form['idnum']
+    else: 
+        mail= request.form['mail']
         password =request.form['password']
-        loginflag=False
         users=getallusers()
         for user in users:
-            if user.idnum==idnum and user.password==password:
-                loginflag=True
+            if user.mail == mail and user.password==password:
                 loging_session['name'] = name
                 return render_template('homepage.html')
 
         if (loginflag==False):
-            return render_template('signin', loginflag=loginflag)
+            return render_template('signin', email = mail)
 
 
 

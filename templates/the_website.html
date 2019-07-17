@@ -12,14 +12,11 @@
     <title>GOW</title>
     <link rel="icon" href="templates/logo.png" />
     <!-- Bootstrap core CSS -->
-    <link
-      href="file:///home/student/Desktop/GOW/css/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="{{url_for('static', filename ='..static/css/bootstrap/css/bootstrap.min.css' )}}"/>
 
     <!-- Custom styles for this template -->
     <link
-      href="file:///home/student/Desktop/GOW/css/scrolling-nav.css"
+      href="css/scrolling-nav.css"
       rel="stylesheet"
     />
     <link
@@ -28,7 +25,7 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <link rel="background" href="../static/aboutus_bg.jpg" />
+    <link rel="background" href="static/aboutus_bg.jpg" />
   </head>
   <style>
     #lead {
@@ -43,6 +40,7 @@
   </style>
 
   <body id="page-top">
+  	
     <!-- Navigation -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
@@ -66,9 +64,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services"
-                >Services</a
-              >
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -86,18 +82,17 @@
     <!--___________________________________________________LOGO/GOW______________________________________________________________________-->
     <header
       class="bg-primary text-white"
-      style="margin-top:50px ;background-color:none !important;"
-    >
+      style="margin-top:50px ;background-color:none !important;"id="GOW">
       <div
-        id="GOW"
+        
         class="container text-center"
-        style="height: 95vh; background-size: 100vw !important;"
-      >
+        style="height: 95vh; background-size: 100vw !important;">
         <p style="font-size:100px;">GOW</p>
         <p class="lead">Go Over World</p>
       </div>
     </header>
     <!--___________________________________________________ABOUT______________________________________________________________________-->
+    <center>
     <div
       style="
     left:0;
@@ -151,19 +146,12 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
+
     </div>
   </section>
+
 </center>
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; GOW</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-
+  
 
 
 
@@ -171,15 +159,7 @@
 
 
   <!-- Bootstrap core JavaScript -->
-  <script src="file:///home/student/Desktop/GOW/vendor/jquery/jquery.min.js"></script>
-  <script src="file:///home/student/Desktop/GOW/css/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="file:///home/student/Desktop/GOW/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom JavaScript for this theme -->
-  <script src="file:///home/student/Desktop/GOW/js/scrolling-nav.js"></script>
-
+ 
     </section>
 
 
@@ -192,17 +172,17 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="file:///home/student/Desktop/GOW/vendor/jquery/jquery.min.js"></script>
-    <script src="file:///home/student/Desktop/GOW/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url_for('static', filename ='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename ='css/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="file:///home/student/Desktop/GOW/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ url_for('static', filename = 'vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
     <!-- Custom JavaScript for this theme -->
-    <script src="file:///home/student/Desktop/GOW/js/scrolling-nav.js"></script>
+    <script src="{{url_for('static', filename ='js/scrolling-nav.js')}}"></script>
 
-    <script src="{{ url_for('static', filename='bootstrap/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='bootstrap/bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script>
       //   var imgsrc = '{{imgsrc}}';
       //   var imgE = document.getElementById('gamelogo');
@@ -228,9 +208,11 @@
           "url(" + imgArray[Math.floor(Math.random() * 3)].src + ")";
         document.getElementById("GOW").style.transition = "1s";
       }
+      document.getElementById("GOW").style.backgroundImage="cover";
       window.setInterval(function() {
         chngbg();
       }, 7000);
     </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   </body>
 </html>
