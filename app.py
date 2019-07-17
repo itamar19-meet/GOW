@@ -21,20 +21,29 @@ def home():
     return render_template("the_website.html")
 
 
+
+# sign up
+
 @app.route('/sign_up', methods=['GET', 'POST'])
-def signup():
+def sign_up():
     if request.method == 'GET':
         return render_template('signup.html')
     else:
         name = request.form['name']
         password =request.form['password']
         mail= request.form['mail']
-        
-        
+        users=getallusers()
+        for user in users:
+            if user.mail == mail:
+                return render_template("signup.html", massage = "email already exist in the system")
         add_user_to_database(name,password, mail)        
-        return render_template('response.html',email = mail)
+        return render_template('the_website.html',email = mail)
+
+
+# sign in
+
 @app.route('/sign_in' , methods=['GET', 'POST'])
-def signin():
+def sign_in():
     if request.method == 'GET':
         return render_template('signin.html')
     else: 
@@ -43,11 +52,9 @@ def signin():
         users=getallusers()
         for user in users:
             if user.mail == mail and user.password==password:
-                loging_session['name'] = name
-                return render_template('homepage.html')
-
-        if (loginflag==False):
-            return render_template('signin', email = mail)
+                loging_session['mail'] = mail
+                return render_template('the_website.html')
+        return render_template("signin.html" , massage = "wrong email or password")
 
 
 
