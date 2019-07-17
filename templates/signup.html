@@ -4,27 +4,53 @@
 	<title>Sign up</title>
 </head>
 <body>
-<form action="/signup" method="post">
+<form action="/sign_up" method="post" class="pure-form">
 
 
 <h1>Name</h1>
-<input type="text" name="name" placeholder="Enter your name please">		
-<h1>ID</h1>
-<input type="text" name="idnum" placeholder="ID">
+<input type="text" name="name" placeholder="Enter your name please" required>		
 <h1>password</h1>
-<input type="password" name="psw" placeholder="ID">
-<input type="text" name="mail" placeholder="mail">
+ <fieldset>
 
-<input type="submit" value="Submit">
+        <input type="password" placeholder="Password" id="password" name="password" required >
+        <input type="password" placeholder="Confirm Password" id="confirm_password"  name="password2" required>
 
-<!-- 
+       
+    </fieldset>
+<h1>insert Email adress</h1>
 
-{% if {{mailflag}} == False}
-<h1>again mail</h1>	
-{{%endif%}}
- -->
+<input type="text" name="mail" placeholder="mail" required>
+<br>
+<input type="submit" value="Submit" class="pure-button pure-button-primary">
+
+
 
 
 </form>
+{{massage}}
 </body>
+
+<script type="text/javascript">
+var password = document.getElementById("password") , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  }
+  else if (password.length <= 8) {
+  	confirm_password.setCustomValidity("password is shorter than 8 digits");
+  }
+   else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
 </html>
+
+
+
+
+
