@@ -65,7 +65,6 @@ def sign_in():
 
 @app.route('/logged' , methods=['GET', 'POST'])
 def logged_in():
-
         return render_template('the_website.html' , name = name_holder , mail =mail_holder)
 
 
