@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # App routing code here
 # @app.route('/home', methods=['GET','POST'])
-app.config['SECRET_KEY'] = 'giladisking'
+app.config['SECRET_KEY'] = 'xGOWx'
 
 # Running the Flask app
 
@@ -23,6 +23,9 @@ def home():
 
 
 # sign up
+mail_holder = ""
+name_holder = ""
+massage_holder =""
 
 @app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
@@ -32,12 +35,14 @@ def sign_up():
         name = request.form['name']
         password =request.form['password']
         mail= request.form['mail']
+        mail_holder = mail
+        name_holder = name
         users=getallusers()
         for user in users:
             if user.mail == mail:
-                return render_template("signup.html", massage = "email already exist in the system")
+                return render_template("signup.html" , massage = "email already exist in the system")
         add_user_to_database(name,password, mail)        
-        return render_template('the_website.html',email = mail)
+        return redirect('/logged')
 
 
 # sign in
@@ -53,9 +58,15 @@ def sign_in():
         for user in users:
             if user.mail == mail and user.password==password:
                 loging_session['mail'] = mail
-                return render_template('the_website.html')
-        return render_template("signin.html" , massage = "wrong email or password")
+                mail_holder = mail
+                name_holder = name
+                return redirect('/logged')
+        return render_template("signin.html" , massage= "wrong email or password")
 
+@app.route('/logged' , methods=['GET', 'POST'])
+def logged_in():
+
+        return render_template('the_website.html' , name = name_holder , mail =mail_holder)
 
 
 if __name__ == "__main__":
