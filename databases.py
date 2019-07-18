@@ -18,3 +18,7 @@ def add_user_to_database(name, password, mail):
 def getallusers():
 	users=session.query(User).all()
 	return users
+
+def getNameByPassword(password):
+	user=session.query(User).filter_by(password = password).first()
+	return user

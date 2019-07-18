@@ -1,6 +1,6 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, sessions, session as loging_session
-from databases import add_user_to_database, getallusers
+from databases import *
 
 from model import *
 import os
@@ -27,6 +27,7 @@ mail_holder = ""
 name_holder = ""
 massage_holder =""
 
+<<<<<<< HEAD
 @app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'GET':
@@ -67,6 +68,48 @@ def sign_in():
 def logged_in():
 
         return render_template('the_website.html' , name = name_holder , mail =mail_holder)
+=======
+# @app.route('/sign_up', methods=['GET', 'POST'])
+# def sign_up():
+#     if request.method == 'GET':
+#         return render_template('signup.html')
+#     else:
+#         name = request.form['name']
+#         password =request.form['password']
+#         mail= request.form['mail']
+#         mail_holder = mail
+#         name_holder = name
+#         users=getallusers()
+#         for user in users:
+#             if user.mail == mail:
+#                 return render_template("signup.html" , massage = "email already exist in the system")
+#         add_user_to_database(name,password, mail)        
+#         return redirect('/logged')
+
+
+# # sign in
+
+# @app.route('/sign_in' , methods=['GET', 'POST'])
+# def sign_in():
+#     if request.method == 'GET':
+#         return render_template('signin.html')
+#     else: 
+#         mail= request.form['mail']
+#         password =request.form['password']
+#         users=getallusers()
+#         for user in users:
+#             if user.mail == mail and user.password==password:
+#                 loging_session['mail'] = mail
+#                 mail_holder = mail
+#                 name = getNameByPassword(password)
+#                 name_holder = name
+#                 return redirect('/logged')
+#         return render_template("signin.html" , massage= "wrong email or password")
+
+# @app.route('/logged' , methods=['GET', 'POST'])
+# def logged_in():
+#         return render_template('the_website.html' , name = name_holder , mail =mail_holder)
+>>>>>>> 890b2fe2ffd91accbf67696f9b9ef6334db9826e
 
 
 if __name__ == "__main__":
