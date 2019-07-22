@@ -25,7 +25,7 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="styles.less" /> -->
     <link rel="background" href="static/aboutus_bg.jpg" />
   </head>
   
@@ -180,7 +180,8 @@ form{
 	width: 100%;
 	height: 100%;
 	
-	z-index: 1;}
+  z-index: 1;
+
 	
 	li{
 		position: absolute;
@@ -188,7 +189,8 @@ form{
 		display: block;
 		width: 40px;
 		height: 40px;
-		background-color: fade(white, 15%);
+    /* background-color: fade(white, 15%); */
+    background-color: red;
 		bottom: -160px;
 		
 		-webkit-animation: square 25s infinite;
@@ -273,7 +275,7 @@ form{
 			
 			animation-delay: 11s;
 		}
-	}
+
 }
 
 @-webkit-keyframes square {
@@ -407,6 +409,7 @@ form{
     <!-- <div> -->
       <center>
           <div class="wrapper">
+
               <div class="container">
                 <section id="services"  style="height:70vh; z-index: 1;">
                 <div
@@ -425,25 +428,27 @@ form{
                     </div>
                   </div>
                   </section>
-                </div>
+              </div>
+
+              <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+              <ul class="bg-bubbles">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
 
                 </div>
             </div>
             
-            <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
             
-            <ul class="bg-bubbles">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              </ul>
+
             </div>
       
 
