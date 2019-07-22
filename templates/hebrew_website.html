@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>GOW</title>
+    <link rel="icon" href="logo.png" />
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename ='..static/css/bootstrap/css/bootstrap.min.css' )}}"/>
+
+    <!-- Custom styles for this template -->
+    <link
+      href="css/scrolling-nav.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="background" href="static/aboutus_bg.jpg" />
+  </head>
+  <style>
+    #lead {
+      font-size: 50px;
+    }
+    .img {
+    }
+    .background-image {
+    }
+    #gg {
+    }
+    .top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+@font-face {
+  font-family: hello_kids;
+  src: url(../static/hello_kids);
+}
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  </style>
+
+  <body id="page-top">
+  	
+    <!-- Navigation -->
+    <nav style="background: rgba(0, 0, 0, 0.3) !important"
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+
+       
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about" style="color:#47c9dd;">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services" style="color: #f89c12">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact" style="color: #87c830">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Donate">Donate</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/sign_up">sign up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/sign_in">Log in</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--___________________________________________________LOGO/GOW______________________________________________________________________-->
+    <header
+      class="bg-primary text-white"
+      style=";background-color:none !important;background-size:100%; "id="GOW">
+      <div
+        
+        class="container text-center"
+        style="height: 95vh; background-size: 10vw !important;">
+        <p style="font-size:100px;padding-top: 30px;font-family: hello_kids ">      
+            <span style='color: #47c9dd'>G</span>
+            <span style='color: #f89c12'>O</span>
+            <span style='color: #87c830'>W</span></p>
+        <p class="lead" style="font-family: hello_kids ">
+            <span style='color: #47c9dd'>Go</span>
+            <span style='color: #f89c12'>Over</span>
+            <span style='color: #87c830'>World</span>
+           </p>
+      </div>
+    </header>
+    <!--___________________________________________________ABOUT______________________________________________________________________-->
+    <center>
+    <!-- <div
+      style="
+    left:0;
+    width:100%;"
+    >
+      <section 
+        
+        style=" max-width: none !important;background-size: 100%;width:100% !important; height: 50vh;" 
+      >
+      
+        <div
+          class="container"
+          id="gg"
+          style=" height:70vh !important; "
+        >
+          <div class="row">
+            <div class="col-lg mx-auto">
+               
+              <div class="container">
+              <img style="width:60vw; position: absolute;z-index: -1;  filter: blur(2px);
+              -webkit-filter: blur(2px);" src="../static/motherboard.jpg">
+              <p class="top-left"  style="left:100px;padding-left: 200px;padding-top:30px;color:	#FFFAFA; ">
+                  fill in info about GOW
+              </p>
+              <h2 style="color:	#FFFAFA !important;background-size: 40vw;height: 50vh;background-color: #47c9dd; margin-right: 50%">About GOW:<br>
+              </h2>
+                </div>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+    </div> -->
+
+    <!-- <section style="height:50vh;width:100%" id="about">
+        <div class="row">
+            <div class="col-lg-3" style="background-color:aqua; height: 50vh;">What is GOW?</div>
+            <div class="col-lg-9" style="background-color:none; max-height: 50vh;"><center><img style="width:100vh; position: relative;z-index: -1;  filter: blur(2px);
+              -webkit-filter: blur(2px);" src=""></center></div>
+          </div>
+    </section> -->
+
+    <section id="about" style="position: relative;text-align: center;height: 50vh; max-width: 100% !important;
+    color: white;overflow: hidden;">
+        <img style="  filter: blur(2px);
+        -webkit-filter: blur(2px);width:100%" src="../static/motherboard.jpg" alt="Snow">
+        <div class="top-left" style="font-size:20px;background-color:(0,0,0,0.3)">What is GOW?</div>
+        <div class="centered" style="rgba(0, 0, 0, 0.3)">Gow is a program that aims to teach Israeli and Palestinian middle school students who are living in an unsafe environment and are exposed to crimes on a daily basis, and as a result, they are deprived of stimulating learning opportunities. It provides vocational training in the field of technology to empower them with skills and values now and in the future.</div>
+  </section>
+    <!--___________________________________________________SERVICES______________________________________________________________________-->
+    <!-- <div> -->
+        <center>
+      <section id="services" class="bg-light" style="height:70vh; z-index: 1;">
+        <div
+          class="container"
+          style="position:absolute;
+      left:0;
+      width:100%;"
+        >
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <center>
+              <h2 style="left:1000px">Services we offer</h2>
+              <p class="lead" style="rgba(0, 0, 0, 0.3)">Gow is a program that aims to teach middle school students who are living in an unsafe environment and are exposed to crimes and boredom. It provides vocational training in the field of technology to empower them with skills and values now and in the future.
+                </p>
+            </center>
+            </div>
+          </div>
+        </div>
+      </section>
+     </center>
+    <!-- </div> -->
+    <!--___________________________________________________CONTACT______________________________________________________________________-->
+    <section id="contact" style="height:70vh">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact us</h2>
+            <p class="lead" style="rgba(0, 0, 0, 0.3)">you can contact us via email GOW_support@gmail.com</p>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</center>
+  <!-- Bootstrap core JavaScript -->
+ 
+    </section>
+    <!-- Footer -->
+    <section  id="Donate">
+    <footer class="py-5 bg-dark" id="Donate" >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+        <p class="m-0 text-center text-white">Copyright &copy; GOW</p>
+        <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+        <script>paypal.Buttons().render('body');</script>
+      </div>
+      </div>
+      </div>
+      <!-- /.container -->
+    </footer>
+  </section>
+
+
+
+
+
+
+  </body>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{url_for('static', filename ='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename ='css/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ url_for('static', filename = 'vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="{{url_for('static', filename ='js/scrolling-nav.js')}}"></script>
+
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.bundle.js') }}"></script>
+    <script>
+      //   var imgsrc = '{{imgsrc}}';
+      //   var imgE = document.getElementById('gamelogo');
+      //   imgE.setAttribute('src',imgsrc);
+      //   //
+      // //
+      var imgArray = new Array();
+
+      imgArray[0] = new Image();
+      imgArray[0].src = "../static/2onpc.png";
+      imgArray[1] = new Image();
+      imgArray[1].src = "../static/pic2.jpg";
+      imgArray[2] = new Image();
+      imgArray[2].src = "../static/1PonPc.png";
+      imgArray[3] = new Image();
+      imgArray[3].src = "../static/pic1.jpg";
+      document.getElementById("GOW").style.backgroundImage =
+        "url(" + imgArray[Math.floor(Math.random() * 3)].src + ")";
+
+      function chngbg() {
+        document.getElementById("GOW").style.transition = "1s";
+        document.getElementById("GOW").style.backgroundImage =
+          "url(" + imgArray[Math.floor(Math.random() * 3)].src + ")";
+        document.getElementById("GOW").style.transition = "1s";
+      }
+      document.getElementById("GOW").style.backgroundImage="cover";
+      window.setInterval(function() {
+        chngbg();
+      }, 7000);
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+</html>
