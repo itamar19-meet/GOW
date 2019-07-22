@@ -21,7 +21,7 @@ def home():
     return render_template("the_website.html")
 
 @app.route('/hebrew')
-def hebre_web():
+def hebrew_web():
     return render_template("hebrew_website.html")
 
 
