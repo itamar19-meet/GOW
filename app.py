@@ -20,8 +20,14 @@ app.config['SECRET_KEY'] = 'xGOWx'
 def home():
     return render_template("the_website.html")
 
+@app.route('/he')
+def home():
+    return render_template("hebrew_website.html")
 
 
+@app.route('/ar')
+def home():
+    return render_template("arabic_website.html")
 # sign up
 mail_holder = ""
 name_holder = ""
