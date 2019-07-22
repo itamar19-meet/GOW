@@ -10,343 +10,41 @@
     <meta name="author" content="" />
 
     <title>GOW</title>
-    <link rel="icon" href="logo.png" />
+
     <!-- Bootstrap core CSS -->
-    <link href="{{url_for('static', filename ='..static/css/bootstrap/css/bootstrap.min.css' )}}"/>
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
+    <!-- Custom fonts for this template -->
+    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/grayscale.min.js"></script>
     <!-- Custom styles for this template -->
-    <link
-      href="css/scrolling-nav.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet/less" type="text/css" href="styles.less" /> -->
-    <link rel="background" href="static/aboutus_bg.jpg" />
-  </head>
+  <link href="../static/css/grayscale.min.css" rel="stylesheet"/>
   
-  <style>
-    #lead {
-      font-size: 50px;
-    }
-    .img {
-    }
-    /* ---------------------------------------------------------------------------------------- */
-    @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
-
-@prim: #53e3a6;
-
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	
-	font-weight: 300;
-}
-
-body{
-	font-family: 'Source Sans Pro', sans-serif;
-	color: white;
-	font-weight: 300;
-	
-	::-webkit-input-placeholder { /* WebKit browsers */
-		font-family: 'Source Sans Pro', sans-serif;
-			color:    white;
-		font-weight: 300;
-	}
-	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-		font-family: 'Source Sans Pro', sans-serif;
-		 color:    white;
-		 opacity:  1;
-		font-weight: 300;
-	}
-	::-moz-placeholder { /* Mozilla Firefox 19+ */
-		font-family: 'Source Sans Pro', sans-serif;
-		 color:    white;
-		 opacity:  1;
-		font-weight: 300;
-	}
-	:-ms-input-placeholder { /* Internet Explorer 10+ */
-		font-family: 'Source Sans Pro', sans-serif;
-		 color:    white;
-		font-weight: 300;
-	}
-}
-
-.wrapper{
-	background: #50a3a2;
-background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
-	
-	/*     */
-	top: 50%;
-	left: 0;
-	width: 100%;
-	height: 400px;
-	margin-top: -200px;
-	overflow: hidden;
-	
-	&.form-success{
-		.container{
-			h1{
-				transform: translateY(85px);
-			}
-		}
-	}
-}
-
-/* .container{
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 80px 0;
-	height: 400px;
-	text-align: center;
-	
-	h1{
-		font-size: 40px;
-		transition-duration: 1s;
-		transition-timing-function: ease-in-put;
-		font-weight: 200;
-	}
-} */
-
-form{
-	padding: 20px 0;
-	position: relative;
-	z-index: 2;
-}
-	
-	input{
-		display: block;
-		appearance: none;
-		outline: 0;
-		border: 1px solid fade(white, 40%);
-		background-color: fade(white, 20%);
-		width: 250px;
-		
-		border-radius: 3px;
-		padding: 10px 15px;
-		margin: 0 auto 10px auto;
-		display: block;
-		text-align: center;
-		font-size: 18px;
-		
-		color: white;
-		
-		transition-duration: 0.25s;
-		font-weight: 300;
-    }
-		/* &:hover{
-			background-color: fade(white, 40%);
-		}
-		
-		&:focus{
-			background-color: white;
-			width: 300px;
-			
-			color: @prim;
-		}
-	} */
-	
-	button{
-		appearance: none;
-		outline: 0;
-		background-color: white;
-		border: 0;
-		padding: 10px 15px;
-		color: @prim;
-		border-radius: 3px;
-		width: 250px;
-		cursor: pointer;
-		font-size: 18px;
-		transition-duration: 0.25s;}
-		
-		/* &:hover{
-			background-color: rgb(245, 247, 249);
-		}
-	}
-} */
-
-.bg-bubbles{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	
-  z-index: 1;
-
-	
-	li{
-		position: absolute;
-		list-style: none;
-		display: block;
-		width: 40px;
-		height: 40px;
-    /* background-color: fade(white, 15%); */
-    background-color: red;
-		bottom: -160px;
-		
-		-webkit-animation: square 25s infinite;
-		animation:         square 25s infinite;
-		
-		-webkit-transition-timing-function: linear;
-		transition-timing-function: linear;}
-		
-		&:nth-child(1){
-			left: 10%;
-		}
-		
-		&:nth-child(2){
-			left: 20%;
-			
-			width: 80px;
-			height: 80px;
-			
-			animation-delay: 2s;
-			animation-duration: 17s;
-		}
-		
-		&:nth-child(3){
-			left: 25%;
-			animation-delay: 4s;
-		}
-		
-		&:nth-child(4){
-			left: 40%;
-			width: 60px;
-			height: 60px;
-			
-			animation-duration: 22s;
-			
-			background-color: fade(white, 25%);
-		}
-		
-		&:nth-child(5){
-			left: 70%;
-		}
-		
-		&:nth-child(6){
-			left: 80%;
-			width: 120px;
-			height: 120px;
-			
-			animation-delay: 3s;
-			background-color: fade(white, 20%);
-		}
-		
-		&:nth-child(7){
-			left: 32%;
-			width: 160px;
-			height: 160px;
-			
-			animation-delay: 7s;
-		}
-		
-		&:nth-child(8){
-			left: 55%;
-			width: 20px;
-			height: 20px;
-			
-			animation-delay: 15s;
-			animation-duration: 40s;
-		}
-		
-		&:nth-child(9){
-			left: 25%;
-			width: 10px;
-			height: 10px;
-			
-			animation-delay: 2s;
-			animation-duration: 40s;
-			background-color: fade(white, 30%);
-		}
-		
-		&:nth-child(10){
-			left: 90%;
-			width: 160px;
-			height: 160px;
-			
-			animation-delay: 11s;
-		}
-
-}
-
-@-webkit-keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-700px) rotate(600deg); }
-}
-@keyframes square {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-700px) rotate(600deg); }
-}
-    /* ---------------------------------------------------------------------------------------- */
-    .top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-@font-face {
-  font-family: hello_kids;
-  src: url(../static/hello_kids);
-}
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-  </style>
+  </head>
 
   <body id="page-top">
-  	
     <!-- Navigation -->
-    <nav style="background: rgba(0, 0, 0, 0.3) !important"
-      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
-      id="mainNav"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-
-       
-
+        
         <button
-          class="navbar-toggler"
+          class="navbar-toggler navbar-toggler-right"
           type="button"
           data-toggle="collapse"
           data-target="#navbarResponsive"
@@ -354,249 +52,222 @@ form{
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          Menu
+          <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about" style="color:#47c9dd;">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services" style="color: #f89c12">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#projects"
+                >Projects</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact" style="color: #87c830">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#Donate">Donate</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/arabic" style="color: #87c830">عربى</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/hebrew" style="color: #87c830">עברית</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/sign_up">sign up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/sign_in">Log in</a>
-            </li> -->
           </ul>
         </div>
       </div>
     </nav>
-    <!--___________________________________________________LOGO/GOW______________________________________________________________________-->
-    <header
-      class="bg-primary text-white"
-      style="background-color:none !important;background-size:100%; "id="GOW">
-      <div
-        
-        class="container text-center"
-        style="height: 95vh; background-size: 10vw !important;">
-        <p style="font-size:100px;padding-top: 30px;font-family: hello_kids ">      
-            <span style='color: #47c9dd'>G</span>
-            <span style='color: #f89c12'>O</span>
-            <span style='color: #87c830'>W</span></p>
-        <p class="lead" style="font-family: hello_kids ">
-            <span style='color: #47c9dd'>Go</span>
-            <span style='color: #f89c12'>Over</span>
-            <span style='color: #87c830'>World</span>
-           </p>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">GOW</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">
+            Away
+          </h2>
+          <a href="#about" class="btn btn-primary js-scroll-trigger"
+            >Get Started</a
+          >
+        </div>
       </div>
     </header>
-        <!--___________________________________________________SERVICES______________________________________________________________________-->
-    <!-- <div> -->
-      <center>
-          <div class="wrapper">
 
-              <div class="container">
-                <section id="services"  style="height:70vh; z-index: 1;">
-                <div
-                  class="container"
-                  style="position:absolute;
-                  left:0;
-                  width:100%;"
-                  >
-                  <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                    <center>
-                    <h2 style="left:1000px">Services we offer</h2>
-                    <p class="lead" style="rgba(0, 0, 0, 0.3);">Gow is a program that aims to teach middle school students who are living in an unsafe environment and are exposed to crimes and boredom. It provides vocational training in the field of technology to empower them with skills and values now and in the future.
-                      </p>
-                    </center>
-                    </div>
-                  </div>
-                  </section>
-              </div>
-
-              <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
-              <ul class="bg-bubbles">
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  </ul>
-
-                </div>
-            </div>
-            
-            
-
-            </div>
-      
-
-       </center>
-      <!-- </div> -->
-    <!--___________________________________________________ABOUT______________________________________________________________________-->
-    <center>
-    <!-- <div
-      style="
-    left:0;
-    width:100%;"
-    >
-      <section 
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
+            <p class="text-white-50">
+              Grayscale is a free Bootstrap theme created by Start Bootstrap. It
+              can be yours right now, simply download the template on
+              <a href="http://startbootstrap.com/template-overviews/grayscale/"
+                >the preview page</a
+              >. The theme is open source, and you can use it for any purpose,
+              personal or commercial.
+            </p>
+          </div>
+        </div>
         
-        style=" max-width: none !important;background-size: 100%;width:100% !important; height: 50vh;" 
-      >
-      
-        <div
-          class="container"
-          id="gg"
-          style=" height:70vh !important; "
-        >
-          <div class="row">
-            <div class="col-lg mx-auto">
-               
-              <div class="container">
-              <img style="width:60vw; position: absolute;z-index: -1;  filter: blur(2px);
-              -webkit-filter: blur(2px);" src="../static/motherboard.jpg">
-              <p class="top-left"  style="left:100px;padding-left: 200px;padding-top:30px;color:	#FFFAFA; ">
-                  fill in info about GOW
+        <img src="../static/img/ipad.png" class="img-fluid" alt=""/>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-8 col-lg-7">
+            <img
+              class="img-fluid mb-3 mb-lg-0"
+              src="../static/img/bg-masthead.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>Shoreline</h4>
+              <p class="text-black-50 mb-0">
+                Grayscale is open source and MIT licensed. This means you can
+                use it for any project - even commercial projects! Download it,
+                customize it, and publish your website!
               </p>
-              <h2 style="color:	#FFFAFA !important;background-size: 40vw;height: 50vh;background-color: #47c9dd; margin-right: 50%">About GOW:<br>
-              </h2>
-                </div>
             </div>
           </div>
         </div>
-       
-      </section>
-    </div> -->
 
-    <!-- <section style="height:50vh;width:100%" id="about">
-        <div class="row">
-            <div class="col-lg-3" style="background-color:aqua; height: 50vh;">What is GOW?</div>
-            <div class="col-lg-9" style="background-color:none; max-height: 50vh;"><center><img style="width:100vh; position: relative;z-index: -1;  filter: blur(2px);
-              -webkit-filter: blur(2px);" src=""></center></div>
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="../static/img/demo-image-01.jpg" alt="" />
           </div>
-    </section> -->
-
-    <section id="about" style="position:relative;text-align:center;height:50vh;max-width:100% !important;
-    color: white;overflow: hidden;">
-        <img style="  filter: blur(2px);
-        -webkit-filter: blur(2px);width:100%" src="../static/motherboard.jpg" alt="Snow">
-        <div class="top-left" style="font-size:20px;background-color:(0,0,0,0.3)">What is GOW?</div>
-        <div class="centered" style="rgba(0, 0, 0, 0.3)">Gow is a program that aims to teach Israeli and Palestinian middle school students who are living in an unsafe environment and are exposed to crimes on a daily basis, and as a result, they are deprived of stimulating learning opportunities. It provides vocational training in the field of technology to empower them with skills and values now and in the future.</div>
-  </section>
-
-    <!--___________________________________________________CONTACT______________________________________________________________________-->
-    <section id="contact" style="height:70vh">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Contact us</h2>
-            <p class="lead" style="rgba(0, 0, 0, 0.3)">you can contact us via email GOW_support@gmail.com</p>
-            
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-left"
+                >
+                  <h4 class="text-white">Misty</h4>
+                  <p class="mb-0 text-white-50">
+                    An example of where you can put an image of a project, or
+                    anything else, along with a description.
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="../static/img/demo-image-02.jpg" alt="" />
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-right"
+                >
+                  <h4 class="text-white">Mountains</h4>
+                  <p class="mb-0 text-white-50">
+                    Another example of a project with its respective
+                    description. These sections work well responsively as well,
+                    try this theme on a small screen!
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 mr-0" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-    </div>
-  </section>
-
-</center>
-  <!-- Bootstrap core JavaScript -->
- 
     </section>
-    <!-- Footer -->
-    <section  id="Donate">
-    <footer class="py-5 bg-dark" id="Donate" >
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-        <p class="m-0 text-center text-white">Copyright &copy; GOW</p>
-        <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-        <script>paypal.Buttons().render('body');</script>
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+            <form class="form-inline d-flex">
+              <input
+                type="email"
+                class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+                id="inputEmail"
+                placeholder="Enter email address..."
+              />
+              <button type="submit" class="btn btn-primary mx-auto">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4" />
+                <div class="small text-black-50">
+                  4923 Market Street, Orlando FL
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4" />
+                <div class="small text-black-50">
+                  <a href="#">@yourdomain.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4" />
+                <div class="small text-black-50">+1 (555) 902-8832</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+          <a href="#" class="mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; Your Website 2019
       </div>
-      <!-- /.container -->
     </footer>
-  </section>
-
-0
-
 
 
   </body>
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{url_for('static', filename ='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{url_for('static', filename ='css/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="{{ url_for('static', filename = 'vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-
-    <!-- Custom JavaScript for this theme -->
-    <script src="{{url_for('static', filename ='js/scrolling-nav.js')}}"></script>
-
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.bundle.js') }}"></script>
-    <script>
-      //   var imgsrc = '{{imgsrc}}';
-      //   var imgE = document.getElementById('gamelogo');
-      //   imgE.setAttribute('src',imgsrc);
-      //   //
-      // //
-      var imgArray = new Array();
-
-      imgArray[0] = new Image();
-      imgArray[0].src = "../static/2onpc.png";
-      imgArray[1] = new Image();
-      imgArray[1].src = "../static/pic2.jpg";
-      imgArray[2] = new Image();
-      imgArray[2].src = "../static/1PonPc.png";
-      imgArray[3] = new Image();
-      imgArray[3].src = "../static/pic1.jpg";
-      document.getElementById("GOW").style.backgroundImage =
-        "url(" + imgArray[Math.floor(Math.random() * 3)].src + ")";
-
-      function chngbg() {
-        document.getElementById("GOW").style.transition = "1s";
-        document.getElementById("GOW").style.backgroundImage =
-          "url(" + imgArray[Math.floor(Math.random() * 3)].src + ")";
-        document.getElementById("GOW").style.transition = "1s";
-      }
-      document.getElementById("GOW").style.backgroundImage="cover";
-      window.setInterval(function() {
-        chngbg();
-      }, 7000);
-    </script>
-
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-  <script>
-  $("#login-button").click(function(event){
-    event.preventDefault();
-    $('form').fadeOut(500);
-    $('.wrapper').addClass('form-success');
-  });
-  </script>
-    
-    
 </html>
