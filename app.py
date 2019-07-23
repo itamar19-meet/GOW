@@ -1,8 +1,5 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, sessions, session as loging_session
-from databases import *
-
-from model import *
 import os
 
 # Starting the flask app
