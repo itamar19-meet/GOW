@@ -10,93 +10,44 @@
     <meta name="author" content="" />
 
     <title>GOW</title>
-    <link rel="icon" href="logo.png" />
+
     <!-- Bootstrap core CSS -->
-    <link href="{{url_for('static', filename ='..static/css/bootstrap/css/bootstrap.min.css' )}}"/>
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
+    <!-- Custom fonts for this template -->
+    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/grayscale.min.js"></script>
     <!-- Custom styles for this template -->
-    <link
-      href="css/scrolling-nav.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
-    <link rel="background" href="static/aboutus_bg.jpg" />
+  <link href="../static/css/grayscale.min.css" rel="stylesheet"/>
+<script src="../static/js/grayscale.js"></script>
+    <!-- Custom styles for this template -->
+  <link href="../static/css/grayscale.css" rel="stylesheet"/>
+
   </head>
-  <style>
-    #lead {
-      font-size: 50px;
-    }
-    .img {
-    }
-    .background-image {
-    }
-    #gg {
-    }
-    .top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-@font-face {
-  font-family: hello_kids;
-  src: url(../static/hello_kids);
-}
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-  </style>
 
   <body id="page-top">
-    
     <!-- Navigation -->
-    <nav style="background: rgba(0, 0, 0, 0.3) !important"
-      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
-      id="mainNav"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-
-       
-
+        
         <button
-          class="navbar-toggler"
+          class="navbar-toggler navbar-toggler-right"
           type="button"
           data-toggle="collapse"
           data-target="#navbarResponsive"
@@ -104,261 +55,230 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          Menu
+          <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about" style="color:#47c9dd;">حول</a>
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services" style="color: #f89c12">خدمات</a>
+              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact" style="color: #87c830">اتصل</a>
+              <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#Donate">تبرع</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/" style="color: #87c830">English</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/hebrew" style="color: #87c830">עברית</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/sign_up">sign up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/sign_in">Log in</a>
-            </li> -->
           </ul>
         </div>
       </div>
     </nav>
-    <!--___________________________________________________LOGO/GOW______________________________________________________________________-->
-    <header
-      class="bg-primary text-white"
-      style=";background-color:none !important;background-size:100%; "id="GOW">
-      <div
-        
-        class="container text-center"
-        style="height: 95vh; background-size: 10vw !important;">
-        <p style="font-size:100px;padding-top: 30px;font-family: hello_kids ">      
-            <span style='color: #47c9dd'>G</span>
-            <span style='color: #f89c12'>O</span>
-            <span style='color: #87c830'>W</span></p>
-        <p class="lead" style="font-family: hello_kids ">
-            <span style='color: #47c9dd'>Go</span>
-            <span style='color: #f89c12'>Over</span>
-            <span style='color: #87c830'>World</span>
-           </p>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">GOW</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">
+            Away
+          </h2>
+          <a href="#about" class="btn btn-primary js-scroll-trigger"
+            >Get Started</a
+          >
+        </div>
       </div>
     </header>
-    <!--___________________________________________________ABOUT______________________________________________________________________-->
-    <center>
-    <!-- <div
-      style="
-    left:0;
-    width:100%;"
-    >
-      <section 
-        
-        style=" max-width: none !important;background-size: 100%;width:100% !important; height: 50vh;" 
-      >
-      
-        <div
-          class="container"
-          id="gg"
-          style=" height:70vh !important; "
-        >
-          <div class="row">
-            <div class="col-lg mx-auto">
-               
-              <div class="container">
-              <img style="width:60vw; position: absolute;z-index: -1;  filter: blur(2px);
-              -webkit-filter: blur(2px);" src="../static/motherboard.jpg">
-              <p class="top-left"  style="left:100px;padding-left: 200px;padding-top:30px;color:  #FFFAFA; ">
-                  fill in info about GOW
-              </p>
-              <h2 style="color: #FFFAFA !important;background-size: 40vw;height: 50vh;background-color: #47c9dd; margin-right: 50%">About GOW:<br>
-              </h2>
-                </div>
-            </div>
-          </div>
-        </div>
-       
-      </section>
-    </div> -->
 
-    <!-- <section style="height:50vh;width:100%" id="about">
-        <div class="row">
-            <div class="col-lg-3" style="background-color:aqua; height: 50vh;">What is GOW?</div>
-            <div class="col-lg-9" style="background-color:none; max-height: 50vh;"><center><img style="width:100vh; position: relative;z-index: -1;  filter: blur(2px);
-              -webkit-filter: blur(2px);" src=""></center></div>
-          </div>
-    </section> -->
-
-    <section id="about" style="position: relative;text-align: center;height: 50vh; max-width: 100% !important;
-    color: white;overflow: hidden;">
-        <img style="  filter: blur(2px);
-        -webkit-filter: blur(2px);width:100%" src="../static/motherboard.jpg" alt="Snow">
-        <div class="top-left" style="font-size:20px;background-color:(0,0,0,0.3)">حول GOW</div>
-        <div class="centered" style="rgba(0, 0, 0, 0.3)">
-        أدخل المحتوى هنا
-      </div>
-  </section>
-    <!--___________________________________________________SERVICES______________________________________________________________________-->
-    <!-- <div> -->
-        <center>
-      <section id="services" class="bg-light" style="height:70vh; z-index: 1;">
-        <div
-          class="container"
-          style="position:absolute;
-      left:0;
-      width:100%;"
-        >
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <center>
-              <h2 style="left:1000px">Services we offer</h2>
-              <p class="lead" style="rgba(0, 0, 0, 0.3)">
-                أدخل المحتوى هنا
-                </p>
-
-            </center>
-            </div>
-          </div>
-        </div>
-      </section>
-     </center>
-    <!-- </div> -->
-    <!--___________________________________________________CONTACT______________________________________________________________________-->
-    <section id="contact" style="height:70vh">
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>اتصل بنا</h2>
-            <p class="lead" style="rgba(0, 0, 0, 0.3)">
-              أدخل المحتوى هنا
+            <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
+            <p class="text-white-50">
+              Grayscale is a free Bootstrap theme created by Start Bootstrap. It
+              can be yours right now, simply download the template on
+              <a href="http://startbootstrap.com/template-overviews/grayscale/"
+                >the preview page</a
+              >. The theme is open source, and you can use it for any purpose,
+              personal or commercial.
             </p>
-          
+          </div>
+        </div>
+        
+        <img src="../static/img/ipad.png" class="img-fluid" alt=""/>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-8 col-lg-7">
+            <img
+              class="img-fluid mb-3 mb-lg-0"
+              src="../static/img/bg-masthead.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>Shoreline</h4>
+              <p class="text-black-50 mb-0">
+                Grayscale is open source and MIT licensed. This means you can
+                use it for any project - even commercial projects! Download it,
+                customize it, and publish your website!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="../static/img/demo-image-01.jpg" alt="" />
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-left"
+                >
+                  <h4 class="text-white">Misty</h4>
+                  <p class="mb-0 text-white-50">
+                    An example of where you can put an image of a project, or
+                    anything else, along with a description.
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="../static/img/demo-image-02.jpg" alt="" />
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-right"
+                >
+                  <h4 class="text-white">Mountains</h4>
+                  <p class="mb-0 text-white-50">
+                    Another example of a project with its respective
+                    description. These sections work well responsively as well,
+                    try this theme on a small screen!
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 mr-0" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-    </div>
-  </section>
-
-</center>
-  <!-- Bootstrap core JavaScript -->
- 
     </section>
-    <!-- Footer -->
-    <section  id="Donate">
-    <footer class="py-5 bg-dark" id="Donate" >
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-        <p class="m-0 text-center text-white">Copyright &copy; GOW</p>
-        <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
-        <script>paypal.Buttons().render('body');</script>
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+            <form class="form-inline d-flex">
+              <input
+                type="email"
+                class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+                id="inputEmail"
+                placeholder="Enter email address..."
+              />
+              <button type="submit" class="btn btn-primary mx-auto">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4" />
+                <div class="small text-black-50">
+                  4923 Market Street, Orlando FL
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4" />
+                <div class="small text-black-50">
+                  <a href="#">@yourdomain.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4" />
+                <div class="small text-black-50">+1 (555) 902-8832</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+          <a href="#" class="mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
       </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; Your Website 2019
       </div>
-      <!-- /.container -->
     </footer>
-  </section>
-
-
-
-
 
 
   </body>
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{url_for('static', filename ='vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{url_for('static', filename ='css/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="{{ url_for('static', filename = 'vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
-    <!-- Custom JavaScript for this theme -->
-    <script src="{{url_for('static', filename ='js/scrolling-nav.js')}}"></script>
 
-    <script src="{{ url_for('static', filename='vendor/jquery/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.bundle.js') }}"></script>
-    <script>
-      //   var imgsrc = '{{imgsrc}}';
-      //   var imgE = document.getElementById('gamelogo');
-      //   imgE.setAttribute('src',imgsrc);
-      //   //
-      // //
-      var imgArray = new Array();
+<!-- test -->
+<script type="text/javascript">
+  !function(e){"use strict";e('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var a=e(this.hash);if((a=a.length?a:e("[name="+this.hash.slice(1)+"]")).length)return e("html, body").animate({scrollTop:a.offset().top-70},1e3,"easeInOutExpo"),!1}}),e(".js-scroll-trigger").click(function(){e(".navbar-collapse").collapse("hide")}),e("body").scrollspy({target:"#mainNav",offset:100});function a(){100<e("#mainNav").offset().top?e("#mainNav").addClass("navbar-shrink"):e("#mainNav").removeClass("navbar-shrink")}a(),e(window).scroll(a)}(jQuery);
 
-      imgArray[0] = new Image();
-      imgArray[0].src = "../static/2onpc.png";
-      imgArray[1] = new Image();
-      imgArray[1].src = "../static/pic2.jpg";
-      imgArray[2] = new Image();
-      imgArray[2].src = "../static/1PonPc.png";
-      imgArray[3] = new Image();
-      imgArray[3].src = "../static/pic1.jpg";
-      document.getElementById("GOW").style.backgroundImage =
-        "url(" + imgArray[Math.floor(Math.random() * 3)].src + ")";
+</script>
 
-      function chngbg() {
-        document.getElementById("GOW").style.transition = "1s";
-        document.getElementById("GOW").style.backgroundImage =
-          "url(" + imgArray[Math.floor(Math.random() * 3)].src + ")";
-        document.getElementById("GOW").style.transition = "1s";
-      }
-      document.getElementById("GOW").style.backgroundImage="cover";
-      window.setInterval(function() {
-        chngbg();
-      }, 7000);
-    </script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              
