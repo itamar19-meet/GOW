@@ -28,10 +28,10 @@ def hebrew_web():
 @app.route('/arabic')
 def arabic_web():
     return render_template("arabic_website.html")
-# sign up
-mail_holder = ""
-name_holder = ""
-massage_holder =""
+# # sign up
+# mail_holder = ""
+# name_holder = ""
+# massage_holder =""
 
 
 
