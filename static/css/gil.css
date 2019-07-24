@@ -684,5 +684,9 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-color: #fed136;
 }
 
-
-
+.rounded-circle{
+  border-radius: 50%;
+  width: 180px;
+  position: absolute;
+  top: 20;
+ }
