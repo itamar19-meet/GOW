@@ -1,10 +1,12 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, sessions, session as loging_session
-
+from databases import Add_Application
 import os
+from flask_mail import Mail, Message
 
 # Starting the flask app
 app = Flask(__name__)
+mail=Mail(app)
 
 # App routing code here
 # @app.route('/home', methods=['GET','POST'])
@@ -12,7 +14,18 @@ app.config['SECRET_KEY'] = 'xGOWx'
 
 # Running the Flask app
 
+mail_settings = {
+    "MAIL_SERVER": 'smtp.gmail.com',
+    "MAIL_PORT": 465,
+    "MAIL_USE_TLS": False,
+    "MAIL_USE_SSL": True,
+    "MAIL_USERNAME":'GOWmeet@gmail.com',
+    "MAIL_PASSWORD": 'meetGOW123'
+}
 
+app.config.update(mail_settings)
+
+mail=Mail(app)
 
 @app.route('/')
 def home():
@@ -38,9 +51,22 @@ def level():
 
 
 
-@app.route('/Apply')
+@app.route('/Apply', methods=['GET', 'POST'])
 def apply():
-    return render_template("Apply.html")
+    if request.method == 'GET':
+           return render_template('Apply.html')
+    else:
+        name = request.form['name']
+        address = request.form['address']
+        phone=request.form['phone']
+        email=request.form['email']
+        msg = Message("Hello" + name,
+                  sender="GOWmeet@gmail.com",
+                  recipients=["GOWmeet@gmail.com"])
+        msg.body = "name: "+str(name) + "\n adress: "+ str(address) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
+        mail.send(msg)
+        Add_Application(name, email, phone, adress)
+    	return render_template("the_website.html")
 
 @app.route('/Apply_heb')
 def apply_heb():

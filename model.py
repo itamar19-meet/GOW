@@ -10,5 +10,6 @@ class Application(Base):
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
 	email = Column(String)
-	phone_num = Column(Integer)
+	phone = Column(String)
+	adress=Column(adress)
 	
