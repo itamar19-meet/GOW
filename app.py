@@ -28,6 +28,16 @@ def arabic_web():
     return render_template("arabic_website.html")
 
 
+@app.route('/team')
+def team():
+    return render_template("teams.html")
+
+@app.route('/level')
+def level():
+    return render_template("levels.html")
+
+
+
 @app.route('/Apply')
 def apply():
     return render_template("Apply.html")
@@ -40,6 +50,7 @@ def apply_heb():
 @app.route('/Apply_arb')
 def apply_arb():
     return render_template("/Apply_arb.html")
+
 # # sign up
 # mail_holder = ""
 # name_holder = ""
