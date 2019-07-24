@@ -27,6 +27,7 @@ def hebrew_web():
 def arabic_web():
     return render_template("arabic_website.html")
 
+
 @app.route('/team')
 def team():
     return render_template("teams.html")
@@ -35,6 +36,20 @@ def team():
 def level():
     return render_template("levels.html")
 
+
+
+@app.route('/Apply')
+def apply():
+    return render_template("Apply.html")
+
+@app.route('/Apply_heb')
+def apply_heb():
+    return render_template("Apply_heb.html")
+
+
+@app.route('/Apply_arb')
+def apply_arb():
+    return render_template("/Apply_arb.html")
 
 # # sign up
 # mail_holder = ""
