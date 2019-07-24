@@ -9,8 +9,8 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 	
-def Add_Application(name, email, phone_num):
-	Application= Applications(name=name, email=email, phone_num=phone_num)
+def Add_Application(name, email, phone, adress):
+	Application= Applications(name=name, email=email, phone=phone, adress=adress)
 	session.add(Application)
 	session.commit()
 

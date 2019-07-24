@@ -686,7 +686,19 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .rounded-circle{
   border-radius: 50%;
-  width: 180px;
+  width: 170px;
   position: absolute;
-  top: 20;
+  right: 0.2%;
+ }
+ .text-muted{
+  position: absolute;
+  right: 20%;
+  top: 80%;
+
+ }
+  .text-muted2{
+  position: absolute;
+  left: 20%;
+  top: 80%;
+
  }
