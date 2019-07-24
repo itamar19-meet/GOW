@@ -11,5 +11,5 @@ class Application(Base):
 	name = Column(String)
 	email = Column(String)
 	phone = Column(String)
-	adress=Column(adress)
+	adress=Column(String)
 	

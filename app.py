@@ -1,6 +1,6 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, sessions, session as loging_session
-from databases import Add_Application
+from databases import *
 import os
 from flask_mail import Mail, Message
 
@@ -66,7 +66,7 @@ def apply():
         msg.body = "name: "+str(name) + "\n adress: "+ str(address) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-    	return render_template("the_website.html")
+        return render_template("the_website.html")
 
 @app.route('/Apply_heb')
 def apply_heb():
