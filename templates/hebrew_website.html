@@ -41,7 +41,56 @@
   <link href="../static/css/grayscale.css" rel="stylesheet"/>
 
   </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
+    .flip-box {
+      background-color: none;
+      width: 200px;
+      height: 200px;
+      /* border: 1px solid #f1f1f1; */
+      perspective: 1000px;
+    }
+
+    .flip-box-inner {
+      background-color: none;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-box-front,
+    .flip-box-back {
+      background-color: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .flip-box-front {
+      background-color: none;
+      background-color: none;
+      color: black;
+    }
+
+    .flip-box-back {
+      background-color: none;
+      background-color: #555;
+      color: white;
+      transform: rotateY(180deg);
+    }
+  </style>
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -70,17 +119,21 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">צור קשר</a>
             </li>
-
-              </li>
-              <a class="nav-link js-scroll-trigger" href="/">English</a>
+            
+              <li class="nav-item">
+              
+              <a class="nav-link js-scroll-trigger" href="/hebrew">English</a>
+            </li>
               <li class="nav-item">
               
               <a class="nav-link js-scroll-trigger" href="/arabic">العربية</a>
             
             </li>
-              <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="Apply_heb">הגש מועמדות</a>
-              <li class="nav-item">
+            <li class="nav-item">
+              
+              <a class="nav-link js-scroll-trigger" href="/Apply">הגש מועמדות</a>
+            </li>
+           
           </ul>
         </div>
       </div>
@@ -94,9 +147,7 @@
           <h2 class="text-white-50 mx-auto mt-2 mb-5">
             התקדם מעבר לעולם
           </h2>
-          <a href="#about" class="btn btn-primary js-scroll-trigger"
-            >התחל</a
-          >
+          <a href="#about" class="btn btn-primary js-scroll-trigger">התחל</a>
         </div>
       </div>
     </header>
@@ -106,16 +157,14 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">GOW על</h2>
-            <p class="text-white-50">
+            <h2 class="text-white mb-4" style="font-size: 55px">GOW על</h2>
+            <p class="text-white-50" style="font-size: 30px">
               בשנת 2016, 367,000 ילדים ונוער בסיכון (עד גיל 17) נרשמו למחלקות לשירותים סוציאליים בעיריות, מדובר ב- %13 מאוכלוסיית הילדים והנוער בישראל.
               העניין החברתי בתמיכה בילדים ונוער בסיכון ברור- הנוער הזה עלול לנשור מבית הספר ולשרוד דרך הידרדרות לפשע או דרך התרומות והמימון של השירותים הסוציאליים במדינה
               בשני המקרים החברה מפסידה. 
             </p>
           </div>
         </div>
-        
-        <img src="../static/img/ipad.png" class="img-fluid" alt=""/>
       </div>
     </section>
 
@@ -126,14 +175,22 @@
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="col-xl-8 col-lg-7">
             <img
+               id = "onpc"
               class="img-fluid mb-3 mb-lg-0"
               src="../static/img/2onpc.png"
               alt=""
+              
             />
           </div>
+          <style type="text/css">
+            #onpc{
+              left: 0;
+              width: 110%;
+            }
+            
           </style>
           <div class="col-xl-4 col-lg-5">
-            <div class="featured-text text-center text-lg-right">
+            <div class="featured-text text-center text-lg-left">
               <h4>:מעניק לילדים GOW</h4>
               <p class="text-black-50 mb-0">
                 <ul>
@@ -153,6 +210,7 @@
               </p>
             </div>
           </div>
+        </div>
 
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -160,15 +218,16 @@
             <img class="img-fluid" src="../static/img/demo-image-01.jpg" alt="" />
           </div>
           <div class="col-lg-6">
-            <div class="bg-black text-center h-100 project">
+            <div class="bg-black text-center h-100 project"style="background-color:#87c830 !important">
               <div class="d-flex h-100">
                 <div
                   class="project-text w-100 my-auto text-center text-lg-left"
                 >
-                  <h4 class="text-white">משימה</h4>
-                  <p class="mb-0 text-white-50">
+
+                  <h4 class="text-black" style="font-size: 40px">משימה</h4>
+                  <p class="mb-0 text-black-50" style="font-size: 18px">
                     המשימה שלנו היא להעצים ולתמוך בבני נוער הנמצאים בסיכון הידרדרות לפשע דרך התניה של כלים שימושיים, מקום בטוח והבעת  הייחודיות שלהם.
-                  </p>
+                 </p>
                   <hr class="d-none d-lg-block mb-0 ml-0" />
                 </div>
               </div>
@@ -180,28 +239,48 @@
           <div class="col-lg-6">
             <img class="img-fluid" src="../static/img/demo-image-02.jpg" alt="" />
           </div>
-          <div class="col-lg-6 order-lg-first">
-            <div class="bg-black text-center h-100 project">
+          <div class="col-lg-6 order-lg-first" >
+            <div class="bg-black text-center h-100 project" style="background-color:#47c9dd !important">
               <div class="d-flex h-100">
                 <div
-                  class="project-text w-100 my-auto text-center text-lg-right"
+                  class="project-text w-100 my-auto text-center text-lg-right "
                 >
-                  <h4 class="text-white">חזון</h4>
-                  <p class="mb-0 text-white-50">
-                    החזון שלנו הוא מציאות בה לכל בני הנוער יש את ההזדמנות לגדול בסביבה בריאה ומקבלת ולהפוך למבוגרים עצמאיים, יצרניים וגאים.
-
-                  </p>
+                  <h4 class="text-black" style="font-size: 40px">חזון</h4>
+                  <p class="mb-0 text-black-50" style="font-size: 18px">
+                    החזון שלנו הוא מציאות בה לכל בני הנוער יש את ההזדמנות לגדול בסביבה בריאה ומקבלת ולהפוך למבוגרים עצמאיים, יצרניים וגאים.  </p>
                   <hr class="d-none d-lg-block mb-0 mr-0" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="../static/img/girl2.jpg" alt="" />
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project"style="background-color:#ff8c2e !important">
+              <div class="d-flex h-100">
+                <div
+                  class="project-text w-100 my-auto text-center text-lg-left"
+                >
+
+                  <h4 class="text-black" style="font-size: 40px">Our Impact</h4>
+                  <p class="mb-0 text-black-50" style="font-size: 18px">
+                    As for 2016, 367,000 children and youth at risk (up to age 17) were registered with the municipal social service departments, representing 13% of all kids and youth in Israel. 
+                    The social interest in treating and supporting youth in risk is clear - preventing youth from dropping out of school, going to criminal or depending on social services allowance- and become a load on the society. 
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
-    <!-- Signup Section -->
-    <section id="signup" class="signup-section">
+
+    <!-- Email Section -->
+    <section id="signup" class="signup-section" style="background-image:src=../static/img/demo-image-02.jpg !important">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -253,7 +332,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-md-4 mb-3 mb-md-0" id="">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
                 <i class='fas fa-hand-holding-usd' style='font-size:24px'></i>
@@ -269,7 +348,210 @@
       
       </div>
     </section>
+<!--                                                          TEAM                                                          -->
 
+
+<section id="team" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+            <h2 class="text-white mb-4" style="font-size: 55px">Our Team</h2>
+          <span>
+            <div class="flip-box" style="display: inline-block;">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    
+                  <img
+                    src="../static/img/mor.jpg"
+                    alt="Paris"
+                    style="width:200px;height:200px ;border-radius: 50%; background-color: none;"
+                  />
+                </div>
+                <div
+                  class="flip-box-back"
+                  style="border-radius: 50%; background-color: none;"
+                >
+                  <br />
+                  <br />
+                  <h2>Mor Yehuda</h2>
+                  <p>Project Manager</p>
+                </div>
+              </div>
+            </div>
+            
+        <div class="flip-box" style="display: inline-block;">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img
+                src="../static/img/salwa.jpg"
+                alt="Paris"
+                style="width:200px;height:200px;border-radius: 50%; background-color: none;"
+              />
+            </div>
+            <div
+              class="flip-box-back"
+              style="border-radius: 50%; background-color: none;"
+            >
+              <br />
+              <br />
+              <h2>Salwa</h2>
+              <p>Project Manager</p>
+            </div>
+          </div>
+        </div>
+      </span>
+      <div class="flip-box" style="display: inline-block;">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img
+              src="../static/img/gilad.jpg"
+              alt="Paris"
+              style="width:200px;height:200px;border-radius: 50%; background-color: none;"
+            />
+          </div>
+          <div
+            class="flip-box-back"
+            style="border-radius: 50%; background-color: none;"
+          >
+            <br />
+            <br />
+            <h2>Gilad Yosef</h2>
+            <p>Programer</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flip-box" style="display: inline-block;">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img
+              src="../static/img/idan.jpg"
+              alt="Paris"
+              style="width:200px;height:200px;border-radius: 50%; background-color: none;"
+            />
+          </div>
+          <div
+            class="flip-box-back"
+            style="border-radius: 50%; background-color: none;"
+          >
+            <br />
+            <br />
+            <h2>Idan Zamir</h2>
+            <p>Programer</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flip-box" style="display: inline-block;background-color: none;">
+        <div class="flip-box-inner" style="background-color: none;">
+          <div class="flip-box-front" style="background-color: none;">
+            <img
+              src="../static/img/itamar.jpg"
+              alt="Paris"
+              style="width:200px;height:200px;border-radius: 50%; background-color: none;"
+            />
+          </div>
+          <div
+            class="flip-box-back"
+            style="border-radius: 50%; background-color: none;"
+          >
+            <br />
+            <br />
+            <h2>Itamar Levi</h2>
+            <p>Programer</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flip-box" style="display: inline-block;">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img
+              src="../static/img/shir.jpg"
+              alt="Adriana"
+              style="width:200px;height:200px;border-radius: 50%; background-color: none;"
+            />
+          </div>
+          <div
+            class="flip-box-back"
+            style="border-radius: 50%; background-color: none;"
+          >
+            <br />
+            <br />
+            <h2>Shir Shitrit</h2>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flip-box" style="display: inline-block;">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img
+              src="../static/img/joseph.jpg"
+              alt="Adriana"
+              style="width:200px;height:200px;border-radius: 50%; background-color: none;"
+            />
+          </div>
+          <div
+            class="flip-box-back"
+            style="border-radius: 50%; background-color: none;"
+          >
+            <br />
+            <br />
+            <h2>Joseph Michael</h2>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flip-box" style="display: inline-block;">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img
+              src="../static/img/aya.jpg"
+              alt="Adriana"
+              style="width:200px;height:200px;border-radius: 50%; background-color: none;"
+            />
+          </div>
+          <div
+            class="flip-box-back"
+            style="border-radius: 50%; background-color: none;"
+          >
+            <br />
+            <br />
+            <h2>Aya Taboni</h2>
+            <p>User experience</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" style="display: inline-block;">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img
+              src="../static/img/omer.jpg"
+              alt="Adriana"
+              style="width:200px;height:200px;border-radius: 50%; background-color: none; "
+            />
+          </div>
+          <div
+            class="flip-box-back"
+            style="border-radius: 50%; background-color: none;"
+          >
+            <br />
+            <br />
+            <h2>Omer Ichar</h2>
+            <p>User experience</p>
+          </div>
+        </div>
+      </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
