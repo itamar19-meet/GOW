@@ -1,8 +1,6 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, sessions, session as loging_session
 
-
-
 import os
 
 # Starting the flask app
@@ -28,6 +26,31 @@ def hebrew_web():
 @app.route('/arabic')
 def arabic_web():
     return render_template("arabic_website.html")
+
+
+@app.route('/team')
+def team():
+    return render_template("teams.html")
+
+@app.route('/level')
+def level():
+    return render_template("levels.html")
+
+
+
+@app.route('/Apply')
+def apply():
+    return render_template("Apply.html")
+
+@app.route('/Apply_heb')
+def apply_heb():
+    return render_template("Apply_heb.html")
+
+
+@app.route('/Apply_arb')
+def apply_arb():
+    return render_template("/Apply_arb.html")
+
 # # sign up
 # mail_holder = ""
 # name_holder = ""
