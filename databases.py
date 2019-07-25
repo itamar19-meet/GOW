@@ -10,10 +10,10 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 	
 def Add_Application(name, email, phone, adress):
-	Application= Applications(name=name, email=email, phone=phone, adress=adress)
-	session.add(Application)
+	application= Application(name=name, email=email, phone=phone, adress=adress)
+	session.add(application)
 	session.commit()
 
 def GetAllApplications():
-	Applications=session.query(Applications).all()
-	return Applications
+	applications=session.query(Application).all()
+	return applications
