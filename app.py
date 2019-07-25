@@ -82,7 +82,8 @@ def apply_heb():
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-    	return render_template("the_website.html")
+        return render_template('the_website.html')
+    	# return render_template("the_website.html")
 
 @app.route('/Apply_arb')
 def apply_arb():
@@ -99,7 +100,8 @@ def apply_arb():
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-    	return render_template("the_website.html")
+        return render_template('the_website.html')
+    	# return render_template("the_website.html")
 # # sign up
 # mail_holder = ""
 # name_holder = ""
