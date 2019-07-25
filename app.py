@@ -1,6 +1,6 @@
 # Flask-related imports
 from flask import Flask, render_template, url_for, redirect, request, sessions, session as loging_session
-from databases import Add_Application
+from databases import *
 import os
 from flask_mail import Mail, Message
 from model import *
@@ -65,7 +65,7 @@ def apply():
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-    	return render_template("the_website.html")
+        return render_template("the_website.html")
 
 @app.route('/Apply_heb')
 def apply_heb():
@@ -77,7 +77,7 @@ def apply_heb():
         phone=request.form['phone']
         email=request.form['email']
         msg = Message("Hello " + str(name),
-                  sender="GOWmeet@gmail.com",
+                  sender=app.config.get("MAIL_USERNAME"),
                   recipients="GOWmeet@gmail.com")
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
@@ -94,7 +94,7 @@ def apply_arb():
         phone=request.form['phone']
         email=request.form['email']
         msg = Message("Hello" + name,
-                  sender="GOWmeet@gmail.com",
+                  sender=app.config.get("MAIL_USERNAME"),
                   recipients="GOWmeet@gmail.com")
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
