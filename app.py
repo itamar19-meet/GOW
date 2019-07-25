@@ -106,7 +106,7 @@ def apply_arb():
 
 @app.route('/donate')
 def donate():
-    return render_template("/onations.html")
+    return render_template("/donations.html")
 
   
 # # sign up
