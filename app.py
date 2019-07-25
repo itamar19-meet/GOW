@@ -82,13 +82,8 @@ def apply_heb():
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"\n mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-<<<<<<< HEAD
         return render_template('the_website.html')
-    	# return render_template("the_website.html")
-=======
-        return render_template("the_website.html")
-
->>>>>>> ce3565bd7d42ea44debaade3b8bad8e5bb46df13
+ 
 
 @app.route('/Apply_arb')
 def apply_arb():
@@ -105,11 +100,8 @@ def apply_arb():
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"\n mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-<<<<<<< HEAD
         return render_template('the_website.html')
-    	# return render_template("the_website.html")
-=======
-    	return render_template("the_website.html")
+    	
 
 
 @app.route('/donate')
@@ -117,8 +109,6 @@ def donate():
     return render_template("/onations.html")
 
   
-
->>>>>>> ce3565bd7d42ea44debaade3b8bad8e5bb46df13
 # # sign up
 # mail_holder = ""
 # name_holder = ""
