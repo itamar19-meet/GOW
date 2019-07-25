@@ -53,7 +53,7 @@ def level():
 @app.route('/Apply', methods=['GET', 'POST'])
 def apply():
     if request.method == 'GET':
-           return render_template('Apply.html')
+           return render_template('application_2.html')
     else:
         name = request.form['name']
         adress = request.form['adress']
