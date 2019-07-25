@@ -77,6 +77,13 @@ def apply_heb():
 def apply_arb():
     return render_template("/Apply_arb.html")
 
+@app.route('/donate')
+def apply_arb():
+    return render_template("/onations.html")
+
+  
+
+
 # # sign up
 # mail_holder = ""
 # name_holder = ""
