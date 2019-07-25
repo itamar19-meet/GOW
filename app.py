@@ -62,7 +62,7 @@ def apply():
         msg = Message("Hello ",
                   sender=app.config.get("MAIL_USERNAME"),
                   recipients=["GOWmeet@gmail.com"])
-        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
+        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"\n mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
         return render_template("the_website.html")
@@ -70,7 +70,7 @@ def apply():
 @app.route('/Apply_heb')
 def apply_heb():
     if request.method == 'GET':
-           return render_template('Apply.html')
+           return render_template('Apply_heb.html')
     else:
         name = request.form['name']
         adress = request.form['adress']
@@ -79,15 +79,16 @@ def apply_heb():
         msg = Message("Hello " + str(name),
                   sender=app.config.get("MAIL_USERNAME"),
                   recipients="GOWmeet@gmail.com")
-        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
+        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"\n mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
     	return render_template("the_website.html")
 
+
 @app.route('/Apply_arb')
 def apply_arb():
     if request.method == 'GET':
-           return render_template('Apply.html')
+           return render_template('Apply_arb.html')
     else:
         name = request.form['name']
         adress = request.form['adress']
@@ -96,7 +97,7 @@ def apply_arb():
         msg = Message("Hello" + name,
                   sender=app.config.get("MAIL_USERNAME"),
                   recipients="GOWmeet@gmail.com")
-        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
+        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"\n mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
     	return render_template("the_website.html")
