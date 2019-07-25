@@ -3,7 +3,7 @@ from flask import Flask, render_template, url_for, redirect, request, sessions, 
 from databases import Add_Application
 import os
 from flask_mail import Mail, Message
-
+from model import *
 # Starting the flask app
 app = Flask(__name__)
 mail=Mail(app)
@@ -24,7 +24,6 @@ mail_settings = {
 }
 
 app.config.update(mail_settings)
-
 mail=Mail(app)
 
 @app.route('/')
@@ -57,26 +56,50 @@ def apply():
            return render_template('Apply.html')
     else:
         name = request.form['name']
-        address = request.form['address']
+        adress = request.form['adress']
         phone=request.form['phone']
         email=request.form['email']
-        msg = Message("Hello" + name,
-                  sender="GOWmeet@gmail.com",
+        msg = Message("Hello ",
+                  sender=app.config.get("MAIL_USERNAME"),
                   recipients=["GOWmeet@gmail.com"])
-        msg.body = "name: "+str(name) + "\n adress: "+ str(address) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
+        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
     	return render_template("the_website.html")
 
 @app.route('/Apply_heb')
 def apply_heb():
-    return render_template("Apply_heb.html")
-
+    if request.method == 'GET':
+           return render_template('Apply.html')
+    else:
+        name = request.form['name']
+        adress = request.form['adress']
+        phone=request.form['phone']
+        email=request.form['email']
+        msg = Message("Hello " + str(name),
+                  sender="GOWmeet@gmail.com",
+                  recipients="GOWmeet@gmail.com")
+        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
+        mail.send(msg)
+        Add_Application(name, email, phone, adress)
+    	return render_template("the_website.html")
 
 @app.route('/Apply_arb')
 def apply_arb():
-    return render_template("/Apply_arb.html")
-
+    if request.method == 'GET':
+           return render_template('Apply.html')
+    else:
+        name = request.form['name']
+        adress = request.form['adress']
+        phone=request.form['phone']
+        email=request.form['email']
+        msg = Message("Hello" + name,
+                  sender="GOWmeet@gmail.com",
+                  recipients="GOWmeet@gmail.com")
+        msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
+        mail.send(msg)
+        Add_Application(name, email, phone, adress)
+    	return render_template("the_website.html")
 # # sign up
 # mail_holder = ""
 # name_holder = ""
