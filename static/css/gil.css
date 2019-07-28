@@ -702,3 +702,25 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   top: 80%;
 
  }
+
+ .ronaldo{
+  position: absolute;
+  left: 20%;
+  top: 35%;  
+ width: 60%;
+ height: 60%;
+
+ }
+
+ .bale{
+  position: absolute;  
+bottom: 80%;
+right: 50%;
+ }
+
+ .pogba{
+  position: absolute;
+bottom: 65%;
+right: 50%;
+
+ }
