@@ -66,7 +66,6 @@ def apply():
         mail.send(msg)
         Add_Application(name, email, phone, adress)
         return redirect("/")
-        alert("Thank you for applying!") 
 
 @app.route('/Apply_heb')
 def apply_heb():
