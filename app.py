@@ -28,12 +28,12 @@ mail=Mail(app)
 
 @app.route('/' , methods =['GET', 'POST'] )
 def home():
-    if request.method = 'get':
+    if request.method == 'get':
         return render_template("the_website.html")
     else:
         vol_email=request.form['email']
         Add_vol_mail(vol_email)
-        render_template("the_website.html")
+        return render_template("the_website.html")
 
 
 @app.route('/hebrew')
