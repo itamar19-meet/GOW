@@ -26,7 +26,15 @@ mail_settings = {
 app.config.update(mail_settings)
 mail=Mail(app)
 
-@app.route('/')
+# @app.route('/' , methods =['GET', 'POST'] )
+# def home():
+#     if request.method == 'get':
+#         return render_template("the_website.html")
+#     else:
+#         vol_email=request.form['email']
+#         Add_vol_mail(vol_email)
+#         return render_template("the_website.html")
+@app.route('/' )
 def home():
     return render_template("the_website.html")
 
@@ -53,7 +61,7 @@ def level():
 @app.route('/Apply', methods=['GET', 'POST'])
 def apply():
     if request.method == 'GET':
-           return render_template('application_2.html')
+           return render_template('Apply.html')
     else:
         name = request.form['name']
         adress = request.form['adress']
@@ -82,7 +90,7 @@ def apply_heb():
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"\n mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-        return render_template('the_website.html')
+        return redirect("/")
  
 
 @app.route('/Apply_arb')
@@ -100,15 +108,26 @@ def apply_arb():
         msg.body = "name: "+str(name) + "\n adress: "+ str(adress) +"\n mail: "+str(email) + "\nphone: "+str(phone) +"\n registered" 
         mail.send(msg)
         Add_Application(name, email, phone, adress)
-        return render_template('the_website.html')
-    	
+        return redirect("/")
+        
 
 
 @app.route('/donate')
 def donate():
-    return render_template("/donations.html")
+    return render_template("donations.html")
+
+
+
+# @app.route('/H5T8N7')
+# def showmails():
+#     return render_template("showmails.html", mails = get_all_vol_mails())
 
   
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
 # # sign up
 # mail_holder = ""
 # name_holder = ""
@@ -156,5 +175,3 @@ def donate():
 
 #         return render_template('the_website.html' , name = name_holder , mail =mail_holder)
 
-if __name__ == "__main__":
-    app.run(debug=True)

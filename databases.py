@@ -17,3 +17,16 @@ def Add_Application(name, email, phone, adress):
 def GetAllApplications():
 	applications=session.query(Application).all()
 	return applications
+def get_all_vol_mails():
+	vols=session.query(volunteer).all()
+	return vols
+
+
+	
+def Add_vol_mail(vol_mail):
+	vol= Application(vol_mail = vol_mail)
+	session.add(vol)
+	session.commit()
+
+# def deletw_vol_mail(vol_mail):
+	
